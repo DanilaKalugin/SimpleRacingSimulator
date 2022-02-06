@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BC68155-6C1F-401F-A167-5E5E6ABB9358}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>SimpleRacingSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedDotNET.Controls">
+      <HintPath>..\ExtendedDotNET.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInfoForm.Designer.cs">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenuForm.Designer.cs">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectorLevelColorDefenition.cs" />
+    <Compile Include="DBDeploymentResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBDeploymentResultForm.Designer.cs">
+      <DependentUpon>DBDeploymentResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DivisionEditingForm.Designer.cs">
+      <DependentUpon>DivisionEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitForm.Designer.cs">
+      <DependentUpon>ExitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangingTheGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>ChangingTheGroupForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MouseActions.cs" />
+    <Compile Include="NewConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewConnectionForm.Designer.cs">
+      <DependentUpon>NewConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkWithImages.cs" />
+    <Compile Include="OtherUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherUsersForm.Designer.cs">
+      <DependentUpon>OtherUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostionChanging.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturersForm.Designer.cs">
+      <DependentUpon>ManufacturersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerNotFoundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerNotFoundForm.Designer.cs">
+      <DependentUpon>ServerNotFoundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatisticsForm.Designer.cs">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuthorizationForm.Designer.cs">
+      <DependentUpon>UserAuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountInfoForm.resx">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenuForm.resx">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBDeploymentResultForm.resx">
+      <DependentUpon>DBDeploymentResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DivisionEditingForm.resx">
+      <DependentUpon>DivisionEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitForm.resx">
+      <DependentUpon>ExitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangingTheGroupForm.resx">
+      <DependentUpon>ChangingTheGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturersForm.resx">
+      <DependentUpon>ManufacturersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewConnectionForm.resx">
+      <DependentUpon>NewConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherUsersForm.resx">
+      <DependentUpon>OtherUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerNotFoundForm.resx">
+      <DependentUpon>ServerNotFoundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthorizationForm.resx">
+      <DependentUpon>UserAuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="bin\Debug\Formula1-Regular_web.ttf" />
+    <None Include="bin\Debug\Forza-Black.ttf" />
+    <None Include="bin\Debug\Forza-Bold.ttf" />
+    <None Include="bin\Debug\Forza-Book.ttf" />
+    <None Include="bin\Debug\Forza-Light.ttf" />
+    <None Include="bin\Debug\Forza-Medium.ttf" />
+    <None Include="bin\Release\Formula1-Regular_web.ttf" />
+    <None Include="bin\Release\Forza-Black.ttf" />
+    <None Include="bin\Release\Forza-Bold.ttf" />
+    <None Include="bin\Release\Forza-Book.ttf" />
+    <None Include="bin\Release\Forza-Light.ttf" />
+    <None Include="bin\Release\Forza-Medium.ttf" />
+    <None Include="Resources\CollectionTiers\1.png" />
+    <None Include="Resources\CollectionTiers\2.png" />
+    <None Include="Resources\CollectionTiers\3.png" />
+    <None Include="Resources\CollectionTiers\4.png" />
+    <None Include="Resources\CollectionTiers\5.png" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Forza7.DAL\Kursach5.DAL.csproj">
+      <Project>{2c67cd21-3f7a-41ce-bb07-ecfcf71357ca}</Project>
+      <Name>Kursach5.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{beaaedbe-4b1f-4871-8b90-d03b1a07ce73}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Forza7.BLL\Kursach5.BLL.csproj">
+      <Project>{86dc4565-b2bf-4414-9b77-cd7f31a31f77}</Project>
+      <Name>Kursach5.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DivisionBackground.png" />
+    <None Include="Resources\SmallImages\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\IsLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\WasBought.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\AF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\AR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\FF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\RF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\RM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive &amp; Engine\RR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\CarImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallImages\FE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\HOR_XB1_Rimac_C_Two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\UserIsNotBlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmallImages\UserIsBlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Car1000.png" />
+    <None Include="bin\Debug\Car1001.png" />
+    <None Include="bin\Debug\Car1002.png" />
+    <None Include="bin\Debug\Car1003.png" />
+    <None Include="bin\Debug\Car1004.png" />
+    <None Include="bin\Debug\Car1005.png" />
+    <None Include="bin\Debug\HOR_XB1_Bugatti_Divo.png" />
+    <None Include="bin\Debug\SmallImages\IsLockedWhite.png" />
+    <None Include="bin\Debug\Car1006.png" />
+    <None Include="bin\Debug\Car1007.png" />
+    <None Include="bin\Debug\Car1008.png" />
+    <None Include="bin\Debug\Car1009.png" />
+    <None Include="bin\Debug\Car1010.png" />
+    <None Include="bin\Debug\Car1011.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1000.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1001.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1002.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1003.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1004.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1005.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1006.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1007.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1008.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1009.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1010.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1011.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1012.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1013.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1014.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1015.png" />
+    <None Include="bin\Debug\CarImagesInMenu\Car1016.png" />
+    <None Include="bin\Debug\SmallImages\Ctrl.png" />
+    <None Include="bin\Debug\SmallImages\Account.png" />
+    <None Include="bin\Debug\SmallImages\Cars.png" />
+    <None Include="bin\Debug\SmallImages\Manufacturers.png" />
+    <None Include="bin\Debug\SmallImages\OtherUsers.png" />
+    <None Include="bin\Debug\Drive &amp; Engine\FrontEngine.png" />
+    <None Include="bin\Debug\Drive &amp; Engine\MiddleEngine.png" />
+    <None Include="bin\Debug\Drive &amp; Engine\RearEngine.png" />
+    <None Include="bin\Debug\SmallImages\Countries.png" />
+    <None Include="bin\Debug\SmallImages\Statistics.png" />
+    <None Include="bin\Debug\SmallImages\V.png" />
+    <None Include="bin\Debug\SmallImages\SteeringWheel.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
